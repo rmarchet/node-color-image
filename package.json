@@ -1,0 +1,27 @@
+{
+  "name": "node-color-image",
+  "version": "0.1.0",
+  "description": "Colorize an image in NodeJS",
+  "main": "index.js",
+  "repository": "https://github.com/rmarchet/node-color-image.git",
+  "author": "Roberto Marchetti <rmarchet@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "prebuild": "rimraf build",
+    "build": "babel src -d build",
+    "babel-version": "babel --version",
+    "prestart": "rimraf output/* && yarn build",
+    "start": "node build/index.js"
+  },
+  "dependencies": {
+    "jimp": "^1.6.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.26.4",
+    "@babel/core": "^7.26.8",
+    "@babel/node": "^7.26.0",
+    "@babel/preset-env": "^7.26.8",
+    "chalk": "^5.4.1",
+    "rimraf": "^6.0.1"
+  }
+}
